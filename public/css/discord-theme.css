@@ -1,0 +1,345 @@
+/* @name OpsexCord
+   @author @geofeed on discord */
+
+:root {
+  --ns-accent: #7c5cff;
+  --ns-accent-soft: rgba(124, 92, 255, 0.18);
+  --ns-bg-deep: #0f1015;
+  --ns-bg-main: #16171d;
+  --ns-bg-raised: #1d1f27;
+
+  --brand-500: var(--ns-accent);
+  --brand-560: var(--ns-accent);
+  --brand-600: var(--ns-accent);
+}
+
+.theme-dark {
+  --background-base-lowest: var(--ns-bg-deep);
+  --background-base-lower: var(--ns-bg-deep);
+  --background-base-low: var(--ns-bg-main);
+  --background-surface-high: var(--ns-bg-raised);
+  --background-primary: var(--ns-bg-main);
+  --background-secondary: var(--ns-bg-deep);
+  --background-secondary-alt: var(--ns-bg-deep);
+  --background-tertiary: #0b0c10;
+  --channeltextarea-background: transparent;
+  --channel-text-area-background: transparent;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--ns-accent-soft); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ns-accent); }
+::-webkit-scrollbar-track { background: transparent; }
+
+[class*="message_"]:hover { background-color: rgba(255, 255, 255, 0.03); }
+
+[class*="premiumPromo"], [class*="nitroUpsell"], [class*="upsell"] { display: none !important; }
+
+body.ns-blur :is(img[src*="/avatars/"],
+  img[src*="/embed/avatars/"],
+  img[src*="avatar-decoration"],
+  img[src*="/banners/"],
+  img[src*="/guilds/"][src*="/users/"],
+  [style*="/avatars/"],
+  [style*="/banners/"],
+  [class*="avatar_"] img,
+  [class*="avatar__"] img,
+  [class*="avatarImage"],
+  [class*="avatarDecoration"],
+  [class*="avatarWrapper"] img,
+  [class*="banner_"],
+  [class*="bannerImage"],
+  [class*="bannerSVG"]) {
+  filter: brightness(0) invert(.13) !important;
+}
+
+body.ns-blur :is([data-list-item-id^="private-channels"]:not([data-list-item-id*="friends"]):not([data-list-item-id*="nitro"]):not([data-list-item-id*="shop"]):not([data-list-item-id*="quests"]):not([data-list-item-id*="library"]),
+  [data-list-item-id^="members-"],
+  [class*="member_"],
+  [class*="memberInner"],
+  [class*="voiceUser"],
+  [class*="usernameFont"],
+  [class*="peopleListItem"],
+  [class*="profilePanel"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="userPopout"],
+  [class*="userPanelOuter"],
+  [class*="panels_"] [class*="nameTag"],
+  [class*="panels_"] [class*="panelTitle"],
+  [class*="panels_"] [class*="panelSubtext"],
+  [class*="titleWrapper"],
+  [class*="privateChannelIntro"],
+  [class*="placeholder_"]),
+body.ns-blur :is([data-list-item-id^="private-channels"]:not([data-list-item-id*="friends"]):not([data-list-item-id*="nitro"]):not([data-list-item-id*="shop"]):not([data-list-item-id*="quests"]):not([data-list-item-id*="library"]),
+  [data-list-item-id^="members-"],
+  [class*="member_"],
+  [class*="memberInner"],
+  [class*="voiceUser"],
+  [class*="usernameFont"],
+  [class*="peopleListItem"],
+  [class*="profilePanel"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="userPopout"],
+  [class*="userPanelOuter"],
+  [class*="panels_"] [class*="nameTag"],
+  [class*="panels_"] [class*="panelTitle"],
+  [class*="panels_"] [class*="panelSubtext"],
+  [class*="titleWrapper"],
+  [class*="privateChannelIntro"],
+  [class*="placeholder_"]) * {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 13px rgba(255, 255, 255, .5) !important;
+  user-select: none !important;
+}
+body.ns-blur :is([data-list-item-id^="private-channels"]:not([data-list-item-id*="friends"]):not([data-list-item-id*="nitro"]):not([data-list-item-id*="shop"]):not([data-list-item-id*="quests"]):not([data-list-item-id*="library"]),
+  [data-list-item-id^="members-"],
+  [class*="member_"],
+  [class*="memberInner"],
+  [class*="voiceUser"],
+  [class*="usernameFont"],
+  [class*="peopleListItem"],
+  [class*="profilePanel"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="userPopout"],
+  [class*="userPanelOuter"],
+  [class*="panels_"] [class*="nameTag"],
+  [class*="panels_"] [class*="panelTitle"],
+  [class*="panels_"] [class*="panelSubtext"],
+  [class*="titleWrapper"],
+  [class*="privateChannelIntro"],
+  [class*="placeholder_"]) :is(img, video, canvas) { filter: blur(12px) !important; }
+
+body.ns-blur :is([id^="message-content-"],
+  [id^="message-username-"],
+  [class*="repliedMessage"],
+  [class*="embedWrapper"],
+  [class*="mediaAttachmentsContainer"],
+  [class*="imageWrapper"],
+  [class*="stickerAsset"],
+  [class*="channelName"],
+  [class*="guildIcon"]):not(:is([id^="message-content-"],
+  [id^="message-username-"],
+  [class*="repliedMessage"],
+  [class*="embedWrapper"],
+  [class*="mediaAttachmentsContainer"],
+  [class*="imageWrapper"],
+  [class*="stickerAsset"],
+  [class*="channelName"],
+  [class*="guildIcon"]) *) {
+  filter: blur(9px) !important;
+  transition: filter .15s ease;
+}
+body.ns-blur :is([id^="message-content-"],
+  [id^="message-username-"],
+  [class*="repliedMessage"],
+  [class*="embedWrapper"],
+  [class*="mediaAttachmentsContainer"],
+  [class*="imageWrapper"],
+  [class*="stickerAsset"],
+  [class*="channelName"],
+  [class*="guildIcon"]):not(:is([id^="message-content-"],
+  [id^="message-username-"],
+  [class*="repliedMessage"],
+  [class*="embedWrapper"],
+  [class*="mediaAttachmentsContainer"],
+  [class*="imageWrapper"],
+  [class*="stickerAsset"],
+  [class*="channelName"],
+  [class*="guildIcon"]) *):hover {
+  filter: none !important;
+}
+
+.ns-toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 100000;
+  background: var(--ns-bg-raised); color: #fff; padding: 10px 16px;
+  border-left: 3px solid var(--ns-accent); border-radius: 6px;
+  font-size: 14px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.ns-blur :is([class*="privateChannelIntro"],
+  [class*="profilePanel"],
+  [class*="userPanel"],
+  [class*="biteSize"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="miniProfile"],
+  [aria-label="User area"]) :is([class*="avatar"], [class*="banner"], [class*="bannerSVG"], [class*="wishlist" i]) {
+  filter: brightness(0) invert(.13) !important;
+}
+body.ns-blur :is([class*="privateChannelIntro"],
+  [class*="profilePanel"],
+  [class*="userPanel"],
+  [class*="biteSize"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="miniProfile"]) :is(img, video, canvas, svg) {
+  filter: blur(14px) brightness(.4) !important;
+}
+
+body.ns-blur :is([class*="privateChannelIntro"],
+  [class*="profilePanel"],
+  [class*="userPanel"],
+  [class*="biteSize"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="miniProfile"],
+  [class*="wishlist" i],
+  [class*="memberSince" i],
+  [aria-label="User area"] [class*="nameTag"],
+  [aria-label="User area"] [class*="panelTitle"],
+  [aria-label="User area"] [class*="panelSubtext"],
+  [aria-label="User area"] [class*="usernameContainer"],
+  [aria-label="User area"] [class*="text"]),
+body.ns-blur :is([class*="privateChannelIntro"],
+  [class*="profilePanel"],
+  [class*="userPanel"],
+  [class*="biteSize"],
+  [class*="userProfileOuter"],
+  [class*="userProfileInner"],
+  [class*="miniProfile"],
+  [class*="wishlist" i],
+  [class*="memberSince" i],
+  [aria-label="User area"] [class*="nameTag"],
+  [aria-label="User area"] [class*="panelTitle"],
+  [aria-label="User area"] [class*="panelSubtext"],
+  [aria-label="User area"] [class*="usernameContainer"],
+  [aria-label="User area"] [class*="text"]) * {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 13px rgba(255, 255, 255, .5) !important;
+  user-select: none !important;
+}
+
+body.ns-blur :is([class*="search_"], [class*="searchBar"], [class*="search-bar"]) :is([class*="placeholder"], [class*="public-DraftEditorPlaceholder"], [class*="DraftEditor"], [class*="notranslate"], input, span, div[role="textbox"]) {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, .45) !important;
+  user-select: none !important;
+}
+body.ns-blur :is([class*="search_"], [class*="searchBar"], [class*="search-bar"]) input::placeholder {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.ns-blur :is([aria-label^="Search" i], [placeholder^="Search" i]):not([class*="quickswitcher"]) {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+body.ns-blur [placeholder^="Search" i]::placeholder { color: transparent !important; }
+
+body.ns-blur :is(img[src*=".gif"],
+  img[src*="tenor"],
+  img[src*="giphy"],
+  img[src*="media.discordapp.net"],
+  img[src*="cdn.discordapp.com/attachments"],
+  img[src*="images-ext-"],
+  video,
+  [class*="gif" i] img,
+  [class*="gif" i] video,
+  [class*="gifFavoriteButton"],
+  [class*="result_"] img,
+  [class*="result_"] video,
+  [class*="stickerAsset"],
+  [class*="animatedSticker"],
+  [class*="lottie"]) {
+  filter: blur(9px) !important;
+  transition: filter .15s ease;
+}
+body.ns-blur :is(img[src*=".gif"],
+  img[src*="tenor"],
+  img[src*="giphy"],
+  img[src*="media.discordapp.net"],
+  img[src*="cdn.discordapp.com/attachments"],
+  img[src*="images-ext-"],
+  video,
+  [class*="gif" i] img,
+  [class*="gif" i] video,
+  [class*="result_"] img,
+  [class*="result_"] video,
+  [class*="stickerAsset"],
+  [class*="animatedSticker"],
+  [class*="lottie"]):hover {
+  filter: none !important;
+}
+
+form[class*="form_"],
+div[class*="channelTextArea_"],
+div[class*="scrollableContainer_"],
+div[class*="textArea_"],
+div[class*="inner_"][class*="sansAttachButton"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+form[class*="form_"]::before,
+div[class*="channelTextArea_"]::before {
+  display: none !important;
+}
+
+[class*="wishlist" i],
+[class*="wishlist" i] :is(div, section, ul, li, a, button) {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+[class*="nowPlayingColumn"],
+[class*="nowPlayingColumn"] > *,
+[class*="nowPlayingColumn"] [class*="scroller"],
+[class*="nowPlayingColumn"] [class*="header"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+:root,
+body,
+.theme-dark,
+.theme-darker,
+.theme-midnight,
+body.ns-bg-on .theme-dark,
+body.ns-bg-on .theme-darker,
+body.ns-bg-on .theme-midnight {
+  --background-modifier-hover: rgba(255, 255, 255, 0.08) !important;
+  --background-modifier-selected: rgba(255, 255, 255, 0.14) !important;
+  --background-modifier-active: rgba(255, 255, 255, 0.12) !important;
+  --background-mod-subtle: rgba(255, 255, 255, 0.06) !important;
+  --background-mod-normal: rgba(255, 255, 255, 0.1) !important;
+  --background-mod-strong: rgba(255, 255, 255, 0.14) !important;
+  --bg-overlay-hover: rgba(255, 255, 255, 0.08) !important;
+  --bg-overlay-selected: rgba(255, 255, 255, 0.14) !important;
+  --bg-overlay-active: rgba(255, 255, 255, 0.12) !important;
+  --interactive-background-hover: rgba(255, 255, 255, 0.08) !important;
+  --interactive-background-active: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-list-item-id^="private-channels"]:hover,
+[data-list-item-id^="private-channels"]:hover > *,
+[data-list-item-id^="private-channels"]:hover [class*="interactive"],
+[data-list-item-id^="private-channels"]:hover [class*="link_"],
+[data-list-item-id^="private-channels"]:hover [class*="container_"],
+[data-list-item-id^="members-"]:hover,
+[data-list-item-id^="members-"]:hover > *,
+[class*="peopleListItem"]:hover,
+[class*="peopleListItem"]:hover > *,
+[class*="peopleListItem"]:active,
+[class*="peopleListItem"]:active > *,
+[class*="nowPlayingColumn"] [class*="card"]:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-list-item-id^="private-channels"]:hover::before,
+[data-list-item-id^="private-channels"]:hover::after,
+[class*="peopleListItem"]:hover::before,
+[class*="peopleListItem"]:hover::after {
+  background: transparent !important;
+  box-shadow: none !important;
+}

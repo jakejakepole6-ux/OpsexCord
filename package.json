@@ -1,0 +1,41 @@
+{
+  "name": "opsexcord",
+  "productName": "OpsexCord",
+  "version": "1.0.0",
+  "main": "OriginalNitroFiles/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win",
+    "pack": "electron-builder --win --dir"
+  },
+  "devDependencies": {
+    "electron": "github:castlabs/electron-releases#v43.0.0+wvcus",
+    "electron-builder": "^26.15.3"
+  },
+  "author": "@geofeed on discord",
+  "build": {
+    "appId": "com.opsexcord.app",
+    "productName": "OpsexCord",
+    "icon": "icon.ico",
+    "electronDist": "node_modules/electron/dist",
+    "electronVersion": "43.0.0",
+    "asar": false,
+    "files": [
+      "OriginalNitroFiles/**/*",
+      "plugins/**/*",
+      "icon.ico",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "OpsexCord"
+    }
+  }
+}
