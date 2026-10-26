@@ -23,6 +23,7 @@
     "files": [
       "OriginalNitroFiles/**/*",
       "plugins/**/*",
+      "public/**/*",
       "icon.ico",
       "package.json"
     ],
@@ -36,6 +37,8 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "OpsexCord"
-    }
+    },
+    "afterPack": "OriginalNitroFiles/evs-sign.js",
+    "artifactName": "OpsexCord-Setup-${version}.exe"
   }
 }
